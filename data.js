@@ -1,1 +1,1 @@
-module.exports = ["./js/other.js","./js/tither.js"]
+module.exports = ["./js/_start.js","./js/tither.js"]

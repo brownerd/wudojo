@@ -1,42 +1,35 @@
-# ESLint
+# Wudojo
 
-Install
-`npm install -g eslint`
+Wudojo is an app for learning JS on your own. It uses:
 
-Init
-`eslint --init`
+- **Webpack** for bundling and auto-reloading the browser
+- **ESLINT** for linting your JS
+- **ES6** cuz that's where we're at
 
-JSX
-`npm install eslint-plugin-react --save-dev`
+## Description
 
-Babel
-`npm install babel-eslint --save-dev`
+This just like my [Budojo]() project, but it uses Webpack instead of Gulp and Browserify. Feel free to use which ever one you prefer.
 
+## Usage
 
-## Config
+`npm run start`
 
-```js
+This will launch the FIRST js file in the `js` directory in Chrome Canary.
 
-// Open browser automatically
-var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+`npm run start 2`
 
-// Create an index.html page for me on the fly
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+You can change which file opens in the `js` directory by adding a number to the start command. So, the above command would open the 2nd .js file in the `js` directory. This is great because you can dump a bunch of js files into the `js` directory and you can run them without having to type their name.
 
-module.exports = {
-  entry: './app.js',
-  output: {
-    path: __dirname,
-    filename: 'bundlez.js'
-  },
-  plugins: [
-    new OpenBrowserPlugin({
-      url: 'http://localhost:8080',
-      browser: 'google chrome canary'
-    }),
-    new HtmlWebpackPlugin()
-  ]
-}
+## Data
+
+Everytime you run `npm run start` the `data.js` file will be updated with an array of the .js file name in the `js` directory, and exported as a module. So the number you specify in the start command refers to the index of the file you want to run.
+
+## LINT
+
+Wudojo uses ESLINT because it's fucking awesome. It is configured to use ESLINT's [standard](https://github.com/feross/eslint-config-standard) configuration.
 
 
-```
+## TODO
+
+[] - Make directory configurable from the command line
+[] - Make browser configurable as well
