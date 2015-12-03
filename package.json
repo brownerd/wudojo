@@ -1,0 +1,37 @@
+{
+  "name": "webpack-eslint",
+  "version": "1.0.0",
+  "description": "`npm install -g eslint`",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack && http-server -p 8080",
+    "watch": "webpack-dev-server --inline --hot --config webpack.config.js",
+    "tuts": "node files.js && webpack-dev-server --inline --hot --config webpack.config.js -f"
+  },
+  "author": "Benjamin Gandhi-Shepard <ben@brownerd.com> (http://brownerd.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6.2.1",
+    "babel-loader": "6.2.0",
+    "babel-plugin-transform-runtime": "6.1.18",
+    "babel-polyfill": "6.2.0",
+    "babel-preset-es2015": "6.1.18",
+    "babel-preset-stage-0": "6.1.18",
+    "babel-runtime": "6.2.0",
+    "css-loader": "0.23.0",
+    "eslint": "1.10.1",
+    "eslint-config-google": "0.3.0",
+    "eslint-config-standard": "4.4.0",
+    "eslint-loader": "1.1.1",
+    "eslint-plugin-standard": "1.3.1",
+    "file-loader": "0.8.5",
+    "html-webpack-plugin": "1.7.0",
+    "open-browser-webpack-plugin": "0.0.1",
+    "style-loader": "0.13.0",
+    "url-loader": "0.5.7",
+    "var": "0.1.3",
+    "webpack": "1.12.9",
+    "webpack-dev-server": "1.14.0",
+    "yargs": "3.30.0"
+  }
+}
