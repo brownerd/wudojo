@@ -8,7 +8,9 @@ Wudojo is an app for learning JS on your own. It uses:
 
 ## Description
 
-This just like my [Budojo]() project, but it uses Webpack instead of Gulp and Browserify. Feel free to use which ever one you prefer.
+Wudojo exists for people that want to lean JS by creating their own JS lessons to practice. For example, I would populate the `js` directory with various .js files. Each file would have a particular code challenge/concept/fundamental that I want to practice. Now I can run that lesson from the command line and automatically launch it in the browser. Everytime I save the changes I make, Webpack will update the browser for me, and ESLINT will lint my code in the terminal.
+
+This just like my [Budojo](https://github.com/brownerd/budojo) project, but it uses Webpack instead of Gulp and Browserify. Feel free to use which ever one you prefer.
 
 ## Usage
 
