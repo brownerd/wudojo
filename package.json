@@ -2,9 +2,9 @@
   "name": "webpack-eslint",
   "version": "1.0.0",
   "description": "`npm install -g eslint`",
-  "main": "app.js",
+  "main": "file-list.js",
   "scripts": {
-    "start": "node files.js && webpack-dev-server --inline --hot --config webpack.config.js -f"
+    "start": "node file-lister.js && webpack-dev-server --inline --hot --config webpack.config.js -f"
   },
   "author": "Benjamin Gandhi-Shepard <ben@brownerd.com> (http://brownerd.com/)",
   "license": "MIT",

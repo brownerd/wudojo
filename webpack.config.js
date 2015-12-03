@@ -5,16 +5,17 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var yargs = require('yargs')
 var filesystem = require('fs')
 var path = require('path')
-var data = require('./data')
+var files = require('./data/file-list')
 
 var argv = yargs
   .usage('Usage: -f [num]')
-  .default('f', 1)
   .argv
+
+console.log( files[argv.f - 1] );
 
 module.exports = {
 
-  entry: data[argv.f - 1],
+  entry: files[argv.f - 1],
 
   output: {
     path: __dirname,
@@ -46,11 +47,11 @@ module.exports = {
           presets: ['es2015', 'stage-0'],
         }
       },
-      // {
-      //   test: /\.js$/,
-      //   loader: "eslint-loader",
-      //   exclude: /node_modules/
-      // },
+      {
+        test: /\.js$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/
+      }
     ]
   },
   plugins: [

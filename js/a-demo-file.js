@@ -2,7 +2,6 @@ let say = 'If you see this in your console'
 
 console.log(`${say}, then ES6 is working`)
 
-
 var h1 = document.createElement('h1')
 var msg = document.createTextNode('Wudojo is running with ES6 and ESLINT ready to go!')
 
